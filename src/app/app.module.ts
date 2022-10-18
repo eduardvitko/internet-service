@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
+import {AuthenticatedService} from "./service/authenticated.service";
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -12,9 +13,9 @@ import { UsersComponent } from './users/users.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule 
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthenticatedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
