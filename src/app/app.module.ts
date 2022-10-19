@@ -13,13 +13,19 @@ import {UserService} from "./service/user.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {NotificationModule} from "./notification.module";
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user/user.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
