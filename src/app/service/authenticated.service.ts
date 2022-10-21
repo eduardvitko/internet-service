@@ -31,12 +31,14 @@ export class AuthenticatedService {
     localStorage.removeItem('users');
   }
 
-  public saveToken(token: string): void {
+  public saveToken(token: string | null): void {
+    // @ts-ignore
     this.token = token;
+    // @ts-ignore
     localStorage.setItem('token', token);
   }
 
-  public addUserToLocalCache(user: User): void {
+  public addUserToLocalCache(user: User | null): void {
     localStorage.setItem('user', JSON.stringify(user));
   }
 
